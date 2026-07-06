@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launching Website Resmi MTs Al-Ihsan Tanah Grogot</title>
+    <style>
+        /* ==========================================================================
+           RESET & BASE STYLES
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #111827;
+            background-color: #f3f4f6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ==========================================================================
+           HEADER & NAVIGASI (KONSISTEN SEKOLAH)
+           ========================================================================== */
+        header {
+            background-color: #ffffff;
+            border-bottom: 4px solid #14532D;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .header-left .logo {
+            height: 70px;
+            width: auto;
+            display: block;
+        }
+        .header-right {
+            flex: 1;
+            margin-left: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        /* Running Text */
+        .running-text-container {
+            background-color: #111827;
+            color: #ffffff;
+            padding: 6px 15px;
+            border-radius: 4px;
+            overflow: hidden;
+            font-size: 13px;
+            border-left: 4px solid #D4AF37;
+        }
+        .running-text-container marquee {
+            display: block;
+        }
+
+        /* Menu Navigasi & Dropdown */
+        nav {
+            display: block;
+        }
+        .main-menu {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+        .main-menu > li {
+            position: relative;
+        }
+        .main-menu > li > a {
+            display: block;
+            padding: 8px 16px;
+            color: #111827;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        .main-menu > li:hover > a {
+            background-color: #14532D;
+            color: #ffffff;
+        }
+        
+        /* Submenu Tingkat 1 */
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #14532D;
+            list-style: none;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            border-radius: 0 0 4px 4px;
+            border-top: 3px solid #D4AF37;
+        }
+        .main-menu > li:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .submenu li {
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .submenu li:last-child {
+            border-bottom: none;
+        }
+        .submenu li a {
+            display: block;
+            padding: 10px 15px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .submenu li a:hover {
+            background-color: #D4AF37;
+            color: #111827;
+        }
+
+        /* Mobile Menu Button (Placeholder responsif) */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: #14532D;
+            border-radius: 2px;
+        }
+
+        /* ==========================================================================
+           MAIN CONTENT AREA (BERITA LAUNCHING)
+           ========================================================================== */
+        main {
+            flex: 1;
+            padding: 40px 5%;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+        }
+        h1 {
+            color: #14532D;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        .meta-date {
+            font-size: 14px;
+            font-weight: 600;
+            color: #4b5563;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            color: #14532D;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 16px;
+            color: #374151;
+        }
+        p em {
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 5px solid #D4AF37;
+            padding: 15px 20px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #1f2937;
+            background-color: #f9fafb;
+            border-radius: 0 4px 4px 0;
+        }
+        .highlight-box {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+        .highlight-box p {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #166534;
+        }
+
+        /* ==========================================================================
+           FOOTER (KONSISTEN SEKOLAH)
+           ========================================================================== */
+        footer {
+            background-color: #111827;
+            color: #ffffff;
+            padding: 30px 5% 20px 5%;
+            font-size: 14px;
+            border-top: 5px solid #D4AF37;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+        }
+        .footer-col h3 {
+            color: #D4AF37;
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .footer-col p {
+            color: #9ca3af;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 15px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        /* ==========================================================================
+           RESPONSIVE RESPONSIVENESS
+           ========================================================================== */
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .header-right {
+                width: 100%;
+                margin-left: 0;
+            }
+            .main-menu {
+                flex-wrap: wrap;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 15px;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="logo.png" alt="Logo MTs Al Ihsan" class="logo">
+        </div>
+        <div class="header-right">
+            <div class="running-text-container">
+                <marquee behavior="scroll" direction="left" scrollamount="4">
+                    Assalaamu'alaykum warahmatullaahi wabarakaatuh. Selamat datang di platform digital resmi MTs Al Ihsan Tanah Grogot. Mengusung kebersahajaan yang dinamis, kami berkomitmen menghadirkan keterbukaan informasi dan layanan pendidikan yang bermutu.
+                </marquee>
+            </div>
+            
+            <nav>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="main-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">Profil</a>
+                        <ul class="submenu">
+                            <li><a href="#">Kepala Madrasah</a></li>
+                            <li><a href="#">Tenaga Pendidik</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Gallery</a>
+                        <ul class="submenu">
+                            <li><a href="#">Galeri Foto Kegiatan</a></li>
+                            <li><a href="#">Galeri Video</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Prestasi</a>
+                        <ul class="submenu">
+                            <li><a href="#">Prestasi MTs Al Ihsan</a></li>
+                            <li><a href="#">Prestasi Guru MTs Al Ihsan</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Fasilitas</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sarana Infrastruktur</a></li>
+                            <li><a href="#">Sarana Pembelajaran</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Informasi</a>
+                        <ul class="submenu">
+                            <li><a href="#">Agenda</a></li>
+                            <li><a href="#">Pengumuman</a></li>
+                            <li><a href="#">Berita Madrasah</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Menuju Era Digital, MTs Al-Ihsan Tanah Grogot Resmi Meluncurkan Website Sebagai Wadah Transparansi</h1>
+            
+            <div class="meta-date">TANAH GROGOT – 4 Juni 2026</div>
+
+            <p>Langkah progresif dalam pemanfaatan teknologi informasi resmi diambil oleh Madrasah Tsanawiyah (MTs) Al Ihsan Tanah Grogot. Guna menjawab tantangan zaman dan meningkatkan mutu pelayanan, pada tanggal 4 Juni 2026 madrasah ini secara resmi meluncurkan (<em>launching</em>) platform digital atau website resminya.</p>
+
+            <p>Kehadiran website ini diharapkan mampu menjadi jembatan informasi yang cepat, akurat, dan komprehensif bagi seluruh elemen yang terlibat dalam ekosistem pendidikan di MTs Al Ihsan.</p>
+
+            <h2>Wujudkan Transparansi dan Kemudahan Akses Informasi</h2>
+            
+            <p>Peluncuran ini didasari oleh komitmen madrasah dalam menyajikan keterbukaan informasi publik. Melalui portal online tersebut, segala bentuk kegiatan akademis, agenda madrasah, pengumuman penting, hingga capaian prestasi para santri dan guru dapat diakses secara langsung oleh masyarakat luas kapan saja dan di mana saja.</p>
+
+            <p>Kepala Madrasah MTs Al Ihsan menegaskan bahwa langkah digitalisasi ini merupakan bentuk adaptasi positif terhadap perkembangan teknologi demi mendukung mutu pendidikan berbasis akhlakul karimah.</p>
+
+            <blockquote>
+                "Mengusung prinsip kebersahajaan yang dinamis, kami mendedikasikan ruang digital ini untuk menghadirkan informasi yang edukatif, transparan, dan akurat. Kami ingin memastikan tidak ada sekat informasi antara madrasah dengan pihak luar," ujar Kepala Madrasah.
+            </blockquote>
+
+            <h2>Mudahkan Pemantauan Orang Tua dan Komite Sekolah</h2>
+            
+            <p>Selain berfungsi sebagai media publikasi berita, website ini dirancang khusus untuk mempermudah fungsi pengawasan. Warga sekitar, orang tua/wali murid, hingga jajaran komite sekolah kini memiliki akses yang lebih mudah untuk memantau perkembangan proses pembelajaran dan program kerja yang sedang dijalankan oleh madrasah.</p>
+
+            <p>Sinergi yang kuat antara pihak sekolah dan orang tua murid diyakini akan semakin solid dengan adanya keterbukaan data ini. Orang tua tidak perlu lagi merasa cemas atau tertinggal informasi mengenai kegiatan putra-putri mereka selama menempuh pendidikan di pesantren maupun madrasah.</p>
+
+            <div class="highlight-box">
+                <p>Dengan hadirnya platform digital resmi ini, MTs Al Ihsan Tanah Grogot siap melangkah lebih maju, memantapkan posisinya sebagai institusi pendidikan modern yang transparan, akuntabel, serta responsif terhadap kebutuhan informasi masyarakat di era digital.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>MTs Al-Ihsan</h3>
+                <p>Institusi pendidikan tingkat menengah pertama berbasis integrasi sains, teknologi, lingkungan hidup, dan akhlakul karimah di Tanah Grogot.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Kontak & Lokasi</h3>
+                <p>Desa Senaken, Kecamatan Tanah Grogot</p>
+                <p>Kabupaten Paser, Kalimantan Timur</p>
+            </div>
+            <div class="footer-col">
+                <h3>Kemitraan</h3>
+                <p>Didukung penuh oleh Komite Sekolah, Wali Murid, dan Warga Masyarakat Senaken.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 MTs Al-Ihsan Tanah Grogot. Hak Cipta Dilindungi Undang-Undang.
+        </div>
+    </footer>
+
+</body>
+</html>

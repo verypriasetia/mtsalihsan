@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tenaga Pendidik - MTs Al Ihsan Tanah Grogot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-top">
+            <div class="navbar-left">
+                <div class="logo-area">
+                    <img src="logo.png" alt="Logo MTs Al Ihsan" class="logo-img">
+                    <div class="logo-text">
+                        <h2>MTs Al Ihsan<br/><span>Tanah Grogot</span></h2>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="running-text-container">
+                <marquee scrollamount="5" behavior="scroll" direction="left">
+                    "Assalaamu'alaykum warahmatullaahi wabarakaatuh. Selamat datang di platform digital resmi MTs Al Ihsan Tanah Grogot. Mengusung kebersahajaan yang dinamis, kami berkomitmen menghadirkan keterbukaan informasi dan layanan pendidikan yang bermutu demi melahirkan generasi unggul yang berakhlak mulia."
+                </marquee>
+            </div>
+        </div>
+
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="active">Profil <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Profil Sekolah</a></li>
+                    <li><a href="profil-guru.html" class="active">Profil Kepala Sekolah dan Guru</a></li>
+                    <li><a href="#">Profil Tenaga Kependidikan</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Gallery <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Galeri Foto Kegiatan</a></li>
+                    <li><a href="#">Galeri Video</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Prestasi <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Prestasi MTs Al Ihsan</a></li>
+                    <li><a href="#">Prestasi Guru MTs Al Ihsan</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Fasilitas <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Sarana Infrastruktur</a></li>
+                    <li><a href="#">Sarana Pembelajaran</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Informasi <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Pengumuman</a></li>
+                    <li><a href="#">Berita Madrasah</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-content-section" style="background-color: #FFFDF5; padding: 40px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            
+            <h2 class="content-title" style="font-size: 26px; font-weight: 700; color: #14532D; margin-bottom: 30px; position: relative; padding-bottom: 8px; border-bottom: 2px solid rgba(20, 83, 45, 0.1);">
+                Profil Kepala Sekolah dan Guru
+            </h2>
+
+            <style>
+                /* Grid System 2 Kolom Sejajar untuk Guru */
+                .guru-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 30px;
+                    width: 100%;
+                }
+
+                /* Kartu Profil Guru */
+                .guru-card {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    background-color: #FFFFFF;
+                    padding: 20px;
+                    border-radius: 8px;
+                    border-left: 5px solid #14532D;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+
+                .guru-card:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 6px 20px rgba(20, 83, 45, 0.12);
+                }
+
+                /* Foto Guru */
+                .guru-photo-wrapper {
+                    width: 130px;
+                    height: 165px;
+                    flex-shrink: 0;
+                    overflow: hidden;
+                    border-radius: 6px;
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+                    background-color: #f3f4f6;
+                    border: 1px solid rgba(0,0,0,0.05);
+                }
+
+                .guru-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                /* Detail Data Guru */
+                .guru-info {
+                    flex: 1;
+                }
+
+                .guru-info h3 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #111827;
+                    margin-bottom: 8px;
+                    line-height: 1.4;
+                }
+
+                .guru-meta {
+                    font-size: 13.5px;
+                    color: #4b5563;
+                    margin-bottom: 5px;
+                    line-height: 1.5;
+                }
+
+                .guru-meta strong {
+                    color: #111827;
+                    font-weight: 600;
+                }
+
+                /* Responsive Mobile Layout */
+                @media (max-width: 768px) {
+                    .guru-grid {
+                        grid-template-columns: 1fr;
+                        gap: 20px;
+                    }
+                    .guru-card {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        padding: 20px;
+                    }
+                    .guru-photo-wrapper {
+                        width: 140px;
+                        height: 180px;
+                        margin-bottom: 10px;
+                    }
+                }
+            </style>
+
+            <div class="guru-grid">
+
+                <!-- 1. AHMAD SYAFII BADAR -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/1.jpg" alt="Foto AHMAD SYAFII BADAR" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>AHMAD SYAFII BADAR, S.Pd.I.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Kepala Sekolah</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Laki-laki</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> TANAH GROGOT, 16-10-1980</p>
+                    </div>
+                </div>
+
+                <!-- 2. SALMAH -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/2.jpg" alt="Foto SALMAH" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>SALMAH, S.P.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Waka. Kurikulum / Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> UJUNG PANDANG, 17-08-1967</p>
+                    </div>
+                </div>
+
+                <!-- 3. HASRIYANI -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/3.jpg" alt="Foto HASRIYANI" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>HASRIYANI, S.Fill.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Waka. Kesiswaan / Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> PULAU SAMA TELLU LOMPO, 04-10-1992</p>
+                    </div>
+                </div>
+
+                <!-- 4. LUTFIATI -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/4.jpg" alt="Foto LUTFIATI" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>LUTFIATI, S.Ag.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Kepala Perpustakaan / Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> 197207062002122002</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> PAKAPURAN, 07-06-1972</p>
+                    </div>
+                </div>
+
+                <!-- 5. TARSIAH -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/5.jpg" alt="Foto TARSIAH" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>TARSIAH, S.Pd.I.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> CIANJUR, 29-06-1987</p>
+                    </div>
+                </div>
+
+                <!-- 6. ADE SUGIARSIH -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/6.jpg" alt="Foto ADE SUGIARSIH" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>ADE SUGIARSIH, S.PD</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> JANJU, 24-04-1991</p>
+                    </div>
+                </div>
+
+                <!-- 7. FITROH ISNAINI -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/7.jpg" alt="Foto FITROH ISNAINI" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>FITROH ISNAINI, S.P.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> SURABAYA, 29-03-1975</p>
+                    </div>
+                </div>
+
+                <!-- 8. ST. HADIJAH PANDANG WANGI -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/8.jpg" alt="Foto ST. HADIJAH PANDANG WANGI" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>ST. HADIJAH PANDANG WANGI, S.Pd.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> UJUNG PANDANG, 19-04-1985</p>
+                    </div>
+                </div>
+
+                <!-- 9. SITI MASTIAH -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/9.jpg" alt="Foto SITI MASTIAH" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>SITI MASTIAH, S.Pd.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> SEBAKUNG, 02-08-1994</p>
+                    </div>
+                </div>
+
+                <!-- 10. ARIS FADILLAH -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/10.jpg" alt="Foto ARIS FADILLAH" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>ARIS FADILLAH, S.Pd.I.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Laki-laki</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> SULILIRAN, 02-02-1988</p>
+                    </div>
+                </div>
+
+                <!-- 11. NURLAILATUL HASANAH -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/11.jpg" alt="Foto NURLAILATUL HASANAH" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>NURLAILATUL HASANAH, S.Ag.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> 197311272005012002</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> SAIT KUNING, 27-11-1973</p>
+                    </div>
+                </div>
+
+                <!-- 12. USMAN -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/12.jpg" alt="Foto USMAN" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>USMAN, S.Pd.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Laki-laki</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> RANTAU PANJANG, 03-02-1996</p>
+                    </div>
+                </div>
+
+                <!-- 13. RIRIN AMALIYAH -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/13.jpg" alt="Foto RIRIN AMALIYAH" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>RIRIN AMALIYAH, S.Pd.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> KEBUMEN, 30-12-1994</p>
+                    </div>
+                </div>
+
+                <!-- 14. ERNI AYU NINGSIH -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/14.jpg" alt="Foto ERNI AYU NINGSIH" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>ERNI AYU NINGSIH, S.E.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> TANAH GROGOT, 09-07-1982</p>
+                    </div>
+                </div>
+
+                <!-- 15. NUR AMALINA SHAFRIYANTI -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/15.jpg" alt="Foto NUR AMALINA SHAFRIYANTI" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>NUR AMALINA SHAFRIYANTI, S.Pd.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> TANAH GROGOT, 18-05-1999</p>
+                    </div>
+                </div>
+
+                <!-- 16. FAIZAL -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/16.jpg" alt="Foto FAIZAL" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>FAIZAL, S. Pd.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Laki-laki</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> MALAYSIA, 05-09-1996</p>
+                    </div>
+                </div>
+
+                <!-- 17. YUNITA DWI BINTARI -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/17.jpg" alt="Foto YUNITA DWI BINTARI" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>YUNITA DWI BINTARI, S. Pd.</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> TANAH GROGOT, 08-06-1997</p>
+                    </div>
+                </div>
+
+                <!-- 18. DWI ARRIFKY ISMAIL -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/18.jpg" alt="Foto DWI ARRIFKY ISMAIL" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>DWI ARRIFKY ISMAIL, S.Pd.></h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Laki-laki</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> TANAH GROGOT, 04-09-2000</p>
+                    </div>
+                </div>
+
+                <!-- 19. SRI WULANSARI -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/19.jpg" alt="Foto SRI WULANSARI" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>SRI WULANSARI S.pd.\</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> PASIR, 10-05-2000</p>
+                    </div>
+                </div>
+
+                <!-- 20. EMA KURNIA -->
+                <div class="guru-card">
+                    <div class="guru-photo-wrapper">
+                        <img src="foto guru/20.jpg" alt="Foto EMA KURNIA" class="guru-img" onerror="this.src='foto guru/default.jpg'">
+                    </div>
+                    <div class="guru-info">
+                        <h3>EMA KURNIA</h3>
+                        <p class="guru-meta"><strong>Jabatan:</strong> Guru Mapel</p>
+                        <p class="guru-meta"><strong>Status Kepegawaian:</strong> Non PNS</p>
+                        <p class="guru-meta"><strong>NIP:</strong> -</p>
+                        <p class="guru-meta"><strong>Jenis Kelamin:</strong> Perempuan</p>
+                        <p class="guru-meta"><strong>Tempat, Tgl Lahir:</strong> Mengkudu, 21-11-2001</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-top-container">
+            
+            <div class="footer-column column-address">
+                <h3>Lokasi Madrasah</h3>
+                
+                <div class="google-map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9220964175654!2d116.2166943!3d-1.8540448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df16a7592cf1a2d%3A0xe1039870ab2c47ab!2sJl.%20Senaken%2C%20Jone%2C%20Kec.%20Tanah%20Grogot%2C%20Kabupaten%20Paser%2C%20Kalimantan%20Timur%2076251!5e0!3m2!1sid!2sid!4v1719999999999" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <p class="address-detail">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    Jl. Cendrawasih RT. 04 Desa Senaken,<br>
+                    Tanah Grogot - Tanah Grogot,<br>
+                    Kab. Paser - Kalimantan Timur<br>
+                    76211
+                </p>
+            </div>
+
+            <div class="footer-column column-contact">
+                <h3>Hubungi Kami</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone-alt"></i> (0543) 5236320</li>
+                    <li><i class="fas fa-envelope"></i> mtsalihsan_senaken@yahoo.com</li>
+                </ul>
+                <div class="footer-social-box">
+                    <h4>Ikuti Media Sosial</h4>
+                    <div class="footer-social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column column-visitor">
+                <h3>Statistik Halaman</h3>
+                <div class="visitor-counter-box">
+                    <h4><i class="fas fa-users"></i> Jumlah Pengunjung</h4>
+                    <div class="counter-display" id="visitorNumber">000026</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom-copyright">
+            <div class="copyright-container">
+                <p>© 2026 MTs Al Ihsan Tanah Grogot. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const baseDate = new Date("2026-07-04"); 
+            const today = new Date();
+            
+            const timeDiff = today.getTime() - baseDate.getTime();
+            const daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+            
+            let currentCount = 26; 
+            
+            if (daysDiff > 0) {
+                for(let i = 0; i < daysDiff; i++) {
+                    const seededRandom = Math.sin(i + 1) * 10000;
+                    const dailyIncrement = Math.floor((seededRandom - Math.floor(seededRandom)) * 5) + 1; 
+                    currentCount += dailyIncrement;
+                }
+            }
+            
+            const formattedNumber = String(currentCount).padStart(6, '0');
+            document.getElementById('visitorNumber').innerText = formattedNumber;
+        });
+    </script>
+</body>
+</html>

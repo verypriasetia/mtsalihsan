@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Judul Berita Baru - MTs Al Ihsan Tanah Grogot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .news-article-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .news-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .news-header {
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 15px;
+        }
+        .news-title-text {
+            font-size: 28px;
+            color: #14532D;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .news-meta-info {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        .featured-image-box {
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+        }
+        .featured-image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .news-body-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 16px;
+            color: #374151;
+            line-height: 1.7;
+        }
+        .news-body-text h2 {
+            font-size: 22px;
+            color: #14532D;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        .pure-text-table-wrapper {
+            margin: 25px 0;
+            overflow-x: auto;
+        }
+        .pure-text-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+            background: #ffffff;
+        }
+        .pure-text-table th, 
+        .pure-text-table td {
+            padding: 12px 15px;
+            border: 1px solid #e5e7eb;
+            text-align: left;
+            color: #374151;
+        }
+        .pure-text-table th {
+            background-color: #14532D;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .pure-text-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        .section-row-header {
+            background-color: #f3f4f6 !important;
+            font-weight: 700;
+            color: #14532D !important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-top">
+            <div class="navbar-left">
+                <div class="logo-area">
+                    <img src="logo.png" alt="Logo MTs Al Ihsan" class="logo-img">
+                    <div class="logo-text">
+                        <h2>MTs Al Ihsan<br/><span>Tanah Grogot</span></h2>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="running-text-container">
+                <marquee scrollamount="5" behavior="scroll" direction="left">
+                    "Assalaamu'alaykum warahmatullaahi wabarakaatuh. Selamat datang di platform digital resmi MTs Al Ihsan Tanah Grogot. Mengusung kebersahajaan yang dinamis, kami berkomitmen menghadirkan keterbukaan informasi dan layanan pendidikan yang bermutu demi melahirkan generasi unggul yang berakhlak mulia."
+                </marquee>
+            </div>
+        </div>
+
+        <ul class="navbar-menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Profil <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Profil Sekolah</a></li>
+                   <li><a href="profil-guru.html">Profil Kepala Sekolah dan Guru</a></li>
+                    <li><a href="#">Profil Tenaga Kependidikan</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Gallery <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Galeri Foto Kegiatan</a></li>
+                    <li><a href="#">Galeri Video</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Prestasi <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Prestasi MTs Al Ihsan</a></li>
+                    <li><a href="#">Prestasi Guru MTs Al Ihsan</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Fasilitas <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Sarana Infrastruktur</a></li>
+                    <li><a href="#">Sarana Pembelajaran</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Informasi <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Pengumuman</a></li>
+                    <li><a href="#">Berita Madrasah</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <main class="news-article-container">
+        <article class="news-card">
+            <div class="news-header">
+                <h1 class="news-title-text">Masukkan Judul Berita di Sini</h1>
+                <div class="news-meta-info">
+                    <span><i class="far fa-calendar-alt"></i> Tanggal Bulan Tahun</span> | 
+                    <span><i class="far fa-user"></i> Pembina: Nama Penulis/Media</span> | 
+                    <span><i class="far fa-folder"></i> Kategori Berita</span>
+                </div>
+            </div>
+
+            <div class="featured-image-box">
+                <img src="nama-file-gambar.jpg" alt="Deskripsi gambar di sini">
+            </div>
+
+            <div class="news-body-text">
+                <p><strong>TANAH GROGOT</strong> – Tulis paragraf pembuka atau pengenalan berita Anda di sini. Jelaskan secara singkat apa, siapa, kapan, dan di mana peristiwa tersebut terjadi agar pembaca langsung memahami inti informasi.</p>
+
+                <p>Tulis kelanjutan informasi paragraf kedua di sini untuk memperjelas konteks berita secara lebih mendalam.</p>
+
+                <h2>Sub-Judul Konten Berita</h2>
+                <p>Tulis isi detail dari sub-judul tersebut di paragraf ini. Anda bisa menjabarkan kronologi, latar belakang, atau detail teknis dari kegiatan yang diberitakan.</p>
+
+                <h2>Tabel Data / Informasi (Opsional)</h2>
+                <div class="pure-text-table-wrapper">
+                    <table class="pure-text-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">Kolom Judul 1</th>
+                                <th style="width: 35%;">Kolom Judul 2</th>
+                                <th style="width: 40%;">Kolom Judul 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="section-row-header">
+                                <td colspan="3">NAMA KATEGORI DATA 1</td>
+                            </tr>
+                            <tr>
+                                <td>Data Baris 1</td>
+                                <td>Keterangan Kolom 2</td>
+                                <td>Keterangan Kolom 3</td>
+                            </tr>
+                            <tr>
+                                <td>Data Baris 2</td>
+                                <td>Keterangan Kolom 2</td>
+                                <td>Keterangan Kolom 3</td>
+                            </tr>
+                            
+                            <tr class="section-row-header">
+                                <td colspan="3">NAMA KATEGORI DATA 2</td>
+                            </tr>
+                            <tr>
+                                <td>Data Baris 3</td>
+                                <td>Keterangan Kolom 2</td>
+                                <td>Keterangan Kolom 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Tulis kalimat atau paragraf penutup berita di sini, termasuk harapan, rencana tindak lanjut, atau kesimpulan dari kegiatan yang telah selesai diselenggarakan.</p>
+
+                <p>Kalimat penutup tambahan untuk memberikan kesan akhir yang kuat pada pembaca berita Anda. <em>(Nama-Media-Penutup)</em></p>
+            </div>
+        </article>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-top-container">
+            
+            <div class="footer-column column-address">
+                <h3>Lokasi Madrasah</h3>
+                <div class="google-map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9220964175654!2d116.2166943!3d-1.8540448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df16a7592cf1a2d%3A0xe1039870ab2c47ab!2sJl.%20Senaken%2C%20Jone%2C%20Kec.%20Tanah%20Grogot%2C%20Kabupaten%20Paser%2C%20Kalimantan%20Timur%2076251!5e0!3m2!1sid!2sid!4v1719999999999" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p class="address-detail">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    Jl. Cendrawasih RT. 04 Desa Senaken,<br>
+                    Tanah Grogot - Tanah Grogot,<br>
+                    Kab. Paser - Kalimantan Timur<br>
+                    76211
+                </p>
+            </div>
+
+            <div class="footer-column column-contact">
+                <h3>Hubungi Kami</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone-alt"></i> (0543) 5236320</li>
+                    <li><i class="fas fa-envelope"></i> mtsalihsan_senaken@yahoo.com</li>
+                </ul>
+                <div class="footer-social-box">
+                    <h4>Ikuti Media Sosial</h4>
+                    <div class="footer-social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column column-visitor">
+                <h3>Statistik Halaman</h3>
+                <div class="visitor-counter-box">
+                    <h4><i class="fas fa-users"></i> Jumlah Pengunjung</h4>
+                    <div class="counter-display" id="visitorNumber">000026</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom-copyright">
+            <div class="copyright-container">
+                <p>© 2026 MTs Al Ihsan Tanah Grogot. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Logika penghitung statistik pengunjung berdasarkan waktu
+        window.addEventListener('DOMContentLoaded', () => {
+            const baseDate = new Date("2026-07-04"); 
+            const today = new Date();
+            
+            const timeDiff = today.getTime() - baseDate.getTime();
+            const daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+            
+            let currentCount = 26; 
+            
+            if (daysDiff > 0) {
+                for(let i = 0; i < daysDiff; i++) {
+                    const seededRandom = Math.sin(i + 1) * 10000;
+                    const dailyIncrement = Math.floor((seededRandom - Math.floor(seededRandom)) * 5) + 1; 
+                    currentCount += dailyIncrement;
+                }
+            }
+            
+            const formattedNumber = String(currentCount).padStart(6, '0');
+            document.getElementById('visitorNumber').innerText = formattedNumber;
+        });
+    </script>
+</body>
+</html>

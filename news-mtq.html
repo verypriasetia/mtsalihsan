@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Santri dan Alumni Pondok Pesantren Al-Ihsan yang Gemilang di Ajang MTQ - MTs Al Ihsan Tanah Grogot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .news-article-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .news-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .news-header {
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 15px;
+        }
+        .news-title-text {
+            font-size: 28px;
+            color: #14532D;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .news-meta-info {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        .featured-image-box {
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+        }
+        .featured-image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .news-body-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 16px;
+            color: #374151;
+            line-height: 1.7;
+        }
+        .news-body-text h2 {
+            font-size: 22px;
+            color: #14532D;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        .pure-text-table-wrapper {
+            margin: 25px 0;
+            overflow-x: auto;
+        }
+        .pure-text-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+            background: #ffffff;
+        }
+        .pure-text-table th, 
+        .pure-text-table td {
+            padding: 12px 15px;
+            border: 1px solid #e5e7eb;
+            text-align: left;
+            color: #374151;
+        }
+        .pure-text-table th {
+            background-color: #14532D;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .pure-text-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        .section-row-header {
+            background-color: #f3f4f6 !important;
+            font-weight: 700;
+            color: #14532D !important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-top">
+            <div class="navbar-left">
+                <div class="logo-area">
+                    <img src="logo.png" alt="Logo MTs Al Ihsan" class="logo-img">
+                    <div class="logo-text">
+                        <h2>MTs Al Ihsan<br/><span>Tanah Grogot</span></h2>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="running-text-container">
+                <marquee scrollamount="5" behavior="scroll" direction="left">
+                    "Assalaamu'alaykum warahmatullaahi wabarakaatuh. Selamat datang di platform digital resmi MTs Al Ihsan Tanah Grogot. Mengusung kebersahajaan yang dinamis, kami berkomitmen menghadirkan keterbukaan informasi dan layanan pendidikan yang bermutu demi melahirkan generasi unggul yang berakhlak mulia."
+                </marquee>
+            </div>
+        </div>
+
+        <ul class="navbar-menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Profil <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Profil Sekolah</a></li>
+                   <li><a href="profil-guru.html">Profil Kepala Sekolah dan Guru</a></li>
+                    <li><a href="#">Profil Tenaga Kependidikan</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Gallery <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Galeri Foto Kegiatan</a></li>
+                    <li><a href="#">Galeri Video</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Prestasi <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Prestasi MTs Al Ihsan</a></li>
+                    <li><a href="#">Prestasi Guru MTs Al Ihsan</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Fasilitas <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Sarana Infrastruktur</a></li>
+                    <li><a href="#">Sarana Pembelajaran</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Informasi <i class="fas fa-chevron-down text-xs"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Pengumuman</a></li>
+                    <li><a href="#">Berita Madrasah</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <!-- AREA KONTEN BERITA -->
+    <main class="news-article-container">
+        <article class="news-card">
+            <div class="news-header">
+                <h1 class="news-title-text">Santri dan Alumni Pondok Pesantren Al-Ihsan yang Gemilang di Ajang MTQ</h1>
+                <div class="news-meta-info">
+                    <span><i class="far fa-calendar-alt"></i> 5 Juli 2026</span> | 
+                    <span><i class="far fa-user"></i> Pembina: MTS-Media</span> | 
+                    <span><i class="far fa-folder"></i> Berita Madrasah</span>
+                </div>
+            </div>
+
+            <!-- FOTO UTAMA 1.JPG DI ATAS AREA TEKS -->
+            <div class="featured-image-box">
+                <img src="1.jpg" alt="Santri dan Alumni PP Al-Ihsan Juara MTQ">
+            </div>
+
+            <div class="news-body-text">
+                <p><strong>TANAH GROGOT</strong> – Pondok Pesantren Al-Ihsan Senaken kembali menorehkan prestasii gemilang di bidang keagamaan. Dalam ajang Musabaqah Tilawatil Qur'an (MTQ) tingkat kabupaten yang baru saja usai, para santri, ustadz, serta alumni yang membawa nama harum almamater pulang dengan berbagai trofi juara di lintas cabang perlombaan.</p>
+
+                <p>Keberhasilan ini menjadi bukti nyata konsistensi Pondok Pesantren Al-Ihsan dalam mendidik generasi yang tidak hanya unggul dalam ilmu terapan, tetapi juga berkarakter qurani dan berwawasan keislaman yang luas.</p>
+
+                <h2>Gemilang di Berbagai Cabang Lomba</h2>
+                <p>Para santri dan alumni Al-Ihsan menembus dominasi di berbagai kategori utama, mulai dari golongan Syarhil Qur'an, Qira'at Murottal, Kaligrafi, hingga penulisan Karya Tulis Ilmiah Al-Qur'an (KTIQ) dan Hadits.</p>
+
+                <p>Pada kategori Juara 1, tim Syarhil Qur'an Putra yang digawangi oleh Muhammad Aslan Amir Muthalib, Muhammad Fatih Fawwaz, dan Karim Amrullah berhasil mengamankan posisi puncak. Prestasi tertinggi ini juga disusul oleh Ustadz Muhammad Saleh di cabang Qira'at Murottal Dewasa Putra, Ustadz M. Nur Faisal di cabang Kaligrafi Dekorasi Putra, serta Qanita Azzahra pada cabang Makalah Ilmiah Hadits.</p>
+
+                <p>Tidak kalah memukau, posisi Juara 2 diraih oleh tim Syarhil Qur'an Putri (Anisa Al Magfira, Zahrah Annisa, Inayah), Nayla Barokah Ningliya di cabang Kaligrafi Kontemporer Putri, dan Ustadzah Lisdawati pada cabang Makalah Alquran (KTIQ).</p>
+
+                <h2>Daftar Lengkap Raihan Prestasi Kafilah Al-Ihsan</h2>
+                <p>Selain gelar Juara 1 dan 2, kafilah Pondok Pesantren Al-Ihsan juga menyabet rentetan gelar juara harapan, dengan rincian sebagai berikut:</p>
+
+                <div class="pure-text-table-wrapper">
+                    <table class="pure-text-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Tingkat Juara</th>
+                                <th style="width: 35%;">Cabang Perlombaan</th>
+                                <th style="width: 45%;">Nama Pemenang</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="section-row-header">
+                                <td colspan="3">JUARA 1</td>
+                            </tr>
+                            <tr>
+                                <td>Juara 1</td>
+                                <td>Syarhil Qur'an Putra</td>
+                                <td>Muhammad Aslan Amir Muthalib, Muhammad Fatih Fawwaz, Karim Amrullah</td>
+                            </tr>
+                            <tr>
+                                <td>Juara 1</td>
+                                <td>Qira'at Murottal Dewasa Putra</td>
+                                <td>Ustadz Muhammad Saleh</td>
+                            </tr>
+                            <tr>
+                                <td>Juara 1</td>
+                                <td>Kaligrafi Dekorasi Putra</td>
+                                <td>Ustadz M. Nur Faisal</td>
+                            </tr>
+                            <tr>
+                                <td>Juara 1</td>
+                                <td>Makalah Ilmiah Hadits</td>
+                                <td>Qanita Azzahra</td>
+                            </tr>
+
+                            <tr class="section-row-header">
+                                <td colspan="3">JUARA 2</td>
+                            </tr>
+                            <tr>
+                                <td>Juara 2</td>
+                                <td>Syarhil Qur'an Putri</td>
+                                <td>Anisa Al Magfira, Zahrah Annisa, Inayah</td>
+                            </tr>
+                            <tr>
+                                <td>Juara 2</td>
+                                <td>Kaligrafi Kontemporer Putri</td>
+                                <td>Nayla Barokah Ningliya</td>
+                            </tr>
+                            <tr>
+                                <td>Juara 2</td>
+                                <td>Makalah Alquran (KTIQ)</td>
+                                <td>Ustadzah Lisdawati</td>
+                            </tr>
+
+                            <tr class="section-row-header">
+                                <td colspan="3">HARAPAN 1</td>
+                            </tr>
+                            <tr>
+                                <td>Harapan 1</td>
+                                <td>Hafalan 500 Hadis Tanpa Sanad</td>
+                                <td>Rosida Jalyani</td>
+                            </tr>
+                            <tr>
+                                <td>Harapan 1</td>
+                                <td>Fahmil Qur'an Putri</td>
+                                <td>Maqviro Eka Septiani Riduwan & Septa Naila Fadhilatul Khusna</td>
+                            </tr>
+                            <tr>
+                                <td>Harapan 1</td>
+                                <td>Fahmil Qur'an Putra</td>
+                                <td>Ilham Augusta, Ulul Azmi, & Fajar Nur Hidayat</td>
+                            </tr>
+
+                            <tr class="section-row-header">
+                                <td colspan="3">HARAPAN 2</td>
+                            </tr>
+                            <tr>
+                                <td>Harapan 2</td>
+                                <td>Hafalan 500 Hadis Tanpa Sanad</td>
+                                <td>Rizky Anwar Rofi'</td>
+                            </tr>
+                            <tr>
+                                <td>Harapan 2</td>
+                                <td>Fahmil Qur'an Putri</td>
+                                <td>Anggie Mulyani, Maulia Nisaturosita, & Khusnul Hasanah</td>
+                            </tr>
+                            <tr>
+                                <td>Harapan 2</td>
+                                <td>Fahmil Qur'an Putra</td>
+                                <td>Fatur Amanullah, Alif Sandiorafa Palewo, & Fahry Khoirul Anam</td>
+                            </tr>
+                            <tr>
+                                <td>Harapan 2</td>
+                                <td>KTIQ Putra</td>
+                                <td>Ustadz Wiranun Wahyudi</td>
+                            </tr>
+
+                            <tr class="section-row-header">
+                                <td colspan="3">HARAPAN 3</td>
+                            </tr>
+                            <tr>
+                                <td>Harapan 3</td>
+                                <td>Fahmil Qur'an Putri</td>
+                                <td>Alvina Zulfia Azzahra, Rayshifa Almaidah, & Salsabila Nur Hafizah</td>
+                            </tr>
+                            <tr>
+                                <td>Harapan 3</td>
+                                <td>Syarhil Putri</td>
+                                <td>Wahda Hafizah, Nabila Taratul Hikmah, & Diana Aprilia</td>
+                            </tr>
+                            <tr>
+                                <td>Harapan 3</td>
+                                <td>Fahmil Putra</td>
+                                <td>Okty Fariz, M. Hanif Ramadhan, & Patur Rahmat</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Buah dari Pendidikan Integratif</h2>
+                <p>Pihak pengelola Pondok Pesantren Al-Ihsan menyampaikan rasa syukur dan apresiasi yang setinggi-tingginya atas dedikasi para santri dan ustadz pembimbing. Pencapaian besar ini dinilai sebagai buah manis dari sistem pendidikan integratif yang diterapkan pesantren, di mana penguatan hafalan Al-Qur'an dan Hadits serta pendalaman kitab disandingkan secara seimbang dengan kurikulum madrasah.</p>
+
+                <p>Dengan raihan prestasi yang merata dari tingkat dasar hingga dewasa ini, Pondok Pesantren Al-Ihsan Senaken, Tanah Grogot, semakin memperkokoh posisinya sebagai lembaga pendidikan Islam pencetak generasi Islami yang kompetitif dan siap berkontribusi bagi masyarakat luas. <em>(MTS-Media)</em></p>
+            </div>
+        </article>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-top-container">
+            
+            <div class="footer-column column-address">
+                <h3>Lokasi Madrasah</h3>
+                
+                <div class="google-map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9220964175654!2d116.2166943!3d-1.8540448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df16a7592cf1a2d%3A0xe1039870ab2c47ab!2sJl.%20Senaken%2C%20Jone%2C%20Kec.%20Tanah%20Grogot%2C%20Kabupaten%20Paser%2C%20Kalimantan%20Timur%2076251!5e0!3m2!1sid!2sid!4v1719999999999" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <p class="address-detail">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    Jl. Cendrawasih RT. 04 Desa Senaken,<br>
+                    Tanah Grogot - Tanah Grogot,<br>
+                    Kab. Paser - Kalimantan Timur<br>
+                    76211
+                </p>
+            </div>
+
+            <div class="footer-column column-contact">
+                <h3>Hubungi Kami</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone-alt"></i> (0543) 5236320</li>
+                    <li><i class="fas fa-envelope"></i> mtsalihsan_senaken@yahoo.com</li>
+                </ul>
+                <div class="footer-social-box">
+                    <h4>Ikuti Media Sosial</h4>
+                    <div class="footer-social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column column-visitor">
+                <h3>Statistik Halaman</h3>
+                <div class="visitor-counter-box">
+                    <h4><i class="fas fa-users"></i> Jumlah Pengunjung</h4>
+                    <div class="counter-display" id="visitorNumber">000026</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom-copyright">
+            <div class="copyright-container">
+                <p>© 2026 MTs Al Ihsan Tanah Grogot. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const wrapper = document.getElementById('sliderWrapper');
+        const dots = document.querySelectorAll('.dot');
+        const originalSlides = document.querySelectorAll('.slide-item');
+        const totalOriginalSlides = originalSlides.length;
+
+        const firstClone = originalSlides[0].cloneNode(true);
+        wrapper.appendChild(firstClone);
+
+        let currentSlide = 0;
+        let isTransitioning = false;
+
+        function updateSlider(smooth = true) {
+            if (smooth) {
+                wrapper.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            } else {
+                wrapper.style.transition = 'none';
+            }
+            
+            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            const activeDotIndex = currentSlide % totalOriginalSlides;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === activeDotIndex);
+            });
+        }
+
+        function nextSlide() {
+            if (isTransitioning) return;
+            currentSlide++;
+            isTransitioning = true;
+            updateSlider(true);
+        }
+
+        wrapper.addEventListener('transitionend', () => {
+            isTransitioning = false;
+            if (currentSlide === totalOriginalSlides) {
+                currentSlide = 0;
+                updateSlider(false);
+            }
+        });
+
+        let slideInterval = setInterval(nextSlide, 3500);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                if (isTransitioning) return;
+                currentSlide = index;
+                updateSlider(true);
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 3500);
+            });
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const baseDate = new Date("2026-07-04"); 
+            const today = new Date();
+            
+            const timeDiff = today.getTime() - baseDate.getTime();
+            const daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+            
+            let currentCount = 26; 
+            
+            if (daysDiff > 0) {
+                for(let i = 0; i < daysDiff; i++) {
+                    const seededRandom = Math.sin(i + 1) * 10000;
+                    const dailyIncrement = Math.floor((seededRandom - Math.floor(seededRandom)) * 5) + 1; 
+                    currentCount += dailyIncrement;
+                }
+            }
+            
+            const formattedNumber = String(currentCount).padStart(6, '0');
+            document.getElementById('visitorNumber').innerText = formattedNumber;
+        });
+    </script>
+</body>
+</html>
