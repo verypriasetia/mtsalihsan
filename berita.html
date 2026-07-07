@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Berita Madrasah - MTs Al-Ihsan Tanah Grogot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="navbar-top container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo MTs Al-Ihsan" class="logo-img">
+                <div class="logo-text">
+                    <h1>MTs AL-IHSAN</h1>
+                    <p>Tanah Grogot, Kab. Paser</p>
+                </div>
+            </div>
+            <div class="nav-right-side">
+                <div class="running-text-container">
+                    <div class="running-text">
+                        <span>Assalaamu'alaykum warahmatullaahi wabarakaatuh. Selamat datang di portal resmi MTs Al Ihsan Tanah Grogot. Kami berkomitmen menyajikan informasi yang edukatif, transparan, dan akurat. •</span>
+                    </div>
+                </div>
+                <nav class="nav-container">
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Profil <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html#sambutan">Kepala Madrasah</a></li>
+                                <li><a href="#">Tenaga Pendidik</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Gallery <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Galeri Foto Kegiatan</a></li>
+                                <li><a href="#">Galeri Video</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Prestasi <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html#prestasi">Prestasi MTs Al Ihsan</a></li>
+                                <li><a href="#">Prestasi Guru</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Informasi <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Agenda</a></li>
+                                <li><a href="berita.html" class="active">Berita Madrasah</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                    <div class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-content-section" style="padding: 40px 20px;">
+        <div class="section-title-header" style="margin-bottom: 30px; border-bottom: 2px solid #D4AF37; padding-bottom: 10px;">
+            <h2 style="color: #14532D; font-size: 2rem;"><i class="fas fa-newspaper"></i> Arsip Berita & Kegiatan Madrasah</h2>
+            <p style="color: #4b5563;">Informasi terkini kegiatan dan pengumuman resmi MTs Al-Ihsan Tanah Grogot</p>
+        </div>
+
+        <div id="sheets-news-container" class="news-grid-layout" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px;">
+            <p id="loading-text" style="color: #6b7280; font-style: italic;"><i class="fas fa-spinner fa-spin"></i> Memuat data berita dari database Google Sheets...</p>
+        </div>
+    </main>
+
+    <footer class="main-footer-area" style="background-color: #111827; color: #FFFDF5; padding: 50px 20px 20px;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px;">
+            <div>
+                <h3 style="color: #D4AF37; margin-bottom: 15px;">MTs Al-Ihsan Tanah Grogot</h3>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: #9ca3af;">Berkomitmen mencetak generasi Islam yang unggul, berakhlak mulia, cerdas, dan berwawasan lingkungan.</p>
+            </div>
+            <div>
+                <h4 style="color: #D4AF37; margin-bottom: 15px;">Tautan Cepat</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem; line-height: 1.8;">
+                    <li><a href="index.html" style="color: #9ca3af; text-decoration: none;">Beranda Utama</a></li>
+                    <li><a href="index.html#sambutan" style="color: #9ca3af; text-decoration: none;">Sambutan Kepala Madrasah</a></li>
+                    <li><a href="berita.html" style="color: #9ca3af; text-decoration: none;">Arsip Berita</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: #D4AF37; margin-bottom: 15px;">Kontak & Alamat</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: #9ca3af;">
+                    Jl. Jendral Sudirman, Senaken, Kec. Tanah Grogot, Kabupaten Paser, Kalimantan Timur.<br>
+                    Email: info@mtsalihsan-grogot.sch.id
+                </p>
+            </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #374151; padding-top: 15px; font-size: 0.85rem; color: #6b7280;">
+            &copy; 2026 MTs Al-Ihsan Tanah Grogot. Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+    <script>
+        const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTm3SA0KKI1AVK0d2wVBtfyP-_nGxy7p1BhCwrhYzELYMpvPN2LzZ7NGX4ONJMgJEzVzRvXdSO5htJg/pub?gid=1347165815&single=true&output=csv";
+
+        // Toggle Hamburger Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Parser CSV sederhana untuk memisahkan baris/kolom data Sheets
+        function parseCSV(text) {
+            let lines = text.split("\n");
+            let result = [];
+            let headers = lines[0].split(",");
+
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i].trim()) continue;
+                let currentline = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                let obj = {};
+                for (let j = 0; j < headers.length; j++) {
+                    let val = currentline[j] ? currentline[j].replace(/^"|"$/g, '').trim() : '';
+                    obj[headers[j].trim()] = val;
+                }
+                result.push(obj);
+            }
+            return result;
+        }
+
+        // Ambil dan tampilkan data berita
+        fetch(CSV_URL)
+            .then(response => response.text())
+            .then(data => {
+                const parsedData = parseCSV(data);
+                const container = document.getElementById('sheets-news-container');
+                container.innerHTML = '';
+
+                if (parsedData.length === 0) {
+                    container.innerHTML = '<p style="color: #6b7280;">Belum ada data berita tersedia di Google Sheets.</p>';
+                    return;
+                }
+
+                parsedData.forEach(item => {
+                    // Struktur kolom asumsi: Nomor, Judul, Tanggal, Pemosting, Ringkasan, Konten, Gambar
+                    const card = document.createElement('div');
+                    card.className = 'news-card-item';
+                    card.style.cssText = 'background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e5e7eb; display: flex; flex-direction: column; transition: transform 0.2s;';
+                    
+                    card.innerHTML = `
+                        <div class="news-img-box" style="height: 180px; background: #e5e7eb; overflow: hidden;">
+                            <img src="${item.Gambar || '1.jpg'}" alt="Ilustrasi Berita" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="news-desc-box" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <div style="font-size: 0.8rem; color: #14532D; font-weight: 600; margin-bottom: 5px;">
+                                <i class="far fa-calendar-alt"></i> ${item.Tanggal || 'Terbaru'} | <i class="far fa-user"></i> ${item.Pemosting || 'Admin'}
+                            </div>
+                            <h3 style="font-size: 1.15rem; color: #111827; margin-bottom: 10px; line-height: 1.4;">${item.Judul || 'Judul Berita'}</h3>
+                            <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 15px; flex-grow: 1; line-height: 1.5;">${item.Ringkasan || item.Berita || ''}</p>
+                            <a href="#" style="color: #14532D; font-weight: 600; text-decoration: none; font-size: 0.9rem;">Selengkapnya &rarr;</a>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error("Gagal mengambil data CSV:", error);
+                document.getElementById('loading-text').innerHTML = '<span style="color: #dc2626;"><i class="fas fa-exclamation-triangle"></i> Gagal memuat data Google Sheets. Pastikan link Publish to Web berformat CSV aktif.</span>';
+            });
+    </script>
+</body>
+</html>
